@@ -10,14 +10,21 @@
 
 ## 安裝
 
-把想要的 skill 資料夾複製到 Claude Code 的 skills 目錄：
+用 [skills CLI](https://github.com/vercel-labs/skills) 一行安裝：
 
 ```bash
-# 全域安裝（所有專案生效）
-cp -r sb ~/.claude/skills/
+# 裝到當前 workspace
+npx skills add ji-cheng-huang/skills@sb
 
-# 或只裝在某個專案
-cp -r sb <project>/.claude/skills/
+# 或裝到 user-level（所有專案生效）
+npx skills add ji-cheng-huang/skills@sb -g
+```
+
+也可以手動複製：
+
+```bash
+cp -r sb ~/.claude/skills/        # 全域
+cp -r sb <project>/.claude/skills/  # 單一專案
 ```
 
 重開 Claude Code session 即生效。
